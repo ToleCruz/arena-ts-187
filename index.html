@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arena TS 187 · Batalla de héroes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>⚔️ Arena TS 187</h1>
+    <p>Batalla de héroes con clases, herencia e interfaces · Actividad 35 · 5AV</p>
+    <span id="contador" class="contador">Personajes creados: 0</span>
+  </header>
+
+  <main>
+    <!-- 1. Elegir a los dos peleadores -->
+    <section id="seleccion" class="tarjeta">
+      <h2>1. Elige a los peleadores</h2>
+      <div class="jugadores">
+        <div class="jugador">
+          <h3>Jugador 1</h3>
+          <label for="nombre1">Nombre</label>
+          <input id="nombre1" value="Brutus" maxlength="12">
+          <label for="tipo1">Clase</label>
+          <select id="tipo1">
+            <option value="guerrero">🛡️ Guerrero</option>
+            <option value="mago">🧙 Mago</option>
+            <option value="arquera">🏹 Arquera</option>
+            <option value="sanadora">✨ Sanadora</option>
+          </select>
+        </div>
+        <div class="vs">VS</div>
+        <div class="jugador">
+          <h3>Jugador 2</h3>
+          <label for="nombre2">Nombre</label>
+          <input id="nombre2" value="Merlina" maxlength="12">
+          <label for="tipo2">Clase</label>
+          <select id="tipo2">
+            <option value="guerrero">🛡️ Guerrero</option>
+            <option value="mago" selected>🧙 Mago</option>
+            <option value="arquera">🏹 Arquera</option>
+            <option value="sanadora">✨ Sanadora</option>
+          </select>
+        </div>
+      </div>
+      <button id="btnPelear" class="grande">¡A pelear! ⚔️</button>
+    </section>
+
+    <!-- 2. La arena -->
+    <section id="arena" class="tarjeta oculto">
+      <h2 id="turno">Turno de …</h2>
+      <div class="peleadores">
+        <div class="peleador" id="p1"></div>
+        <div class="peleador" id="p2"></div>
+      </div>
+      <div class="acciones">
+        <button id="btnAtacar">🗡️ Atacar</button>
+        <button id="btnEspecial">💥 Especial</button>
+        <button id="btnObjetos" class="sec">🔍 Ver objetos en consola</button>
+      </div>
+      <div id="ganador" class="ganador oculto"></div>
+      <button id="btnRevancha" class="sec oculto">🔄 Nueva batalla</button>
+    </section>
+  </main>
+
+  <section class="consola-pagina">
+    <h2>Consola en la página</h2>
+    <ul id="consola"></ul>
+  </section>
+
+  <script src="scripts/consola.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
