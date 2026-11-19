@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #15162b; color: #eee; }
+header { background: linear-gradient(135deg, #5b21b6, #db2777); padding: 18px 24px; text-align: center; position: relative; }
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 4px 0 0; opacity: .9; }
+.contador { display: inline-block; margin-top: 8px; background: rgba(0,0,0,.25); padding: 3px 12px; border-radius: 20px; font-size: .9rem; }
+main { max-width: 980px; margin: 20px auto; padding: 0 16px; }
+.tarjeta { background: #23244a; border-radius: 16px; padding: 20px; box-shadow: 0 6px 20px rgba(0,0,0,.35); margin-bottom: 18px; }
+.tarjeta h2 { margin: 0 0 14px; color: #fbbf24; text-align: center; }
+.oculto { display: none !important; }
+.jugadores { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; }
+.jugador { background: #2e2f5e; border-radius: 12px; padding: 14px; }
+.jugador h3 { margin: 0 0 6px; color: #a5b4fc; }
+.vs { font-size: 2rem; font-weight: 900; color: #f472b6; text-align: center; }
+label { display: block; font-size: .85rem; margin: 8px 0 4px; color: #c7c9f5; }
+input, select { width: 100%; padding: 9px; border-radius: 8px; border: none; font-size: 1rem; background: #f5f5ff; }
+button { background: #7c3aed; color: #fff; border: none; border-radius: 10px; padding: 10px 18px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform .1s, background .3s; }
+button:hover { background: #db2777; transform: translateY(-2px); }
+button:disabled { background: #555; cursor: not-allowed; transform: none; }
+button.sec { background: transparent; border: 2px solid #a5b4fc; color: #a5b4fc; }
+button.grande { display: block; margin: 18px auto 0; font-size: 1.2rem; padding: 12px 30px; }
+.peleadores { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.peleador { background: #2e2f5e; border-radius: 14px; padding: 16px; text-align: center; border: 3px solid transparent; transition: border-color .3s; }
+.peleador.activo { border-color: #fbbf24; box-shadow: 0 0 18px rgba(251,191,36,.4); }
+.peleador.derrotado { opacity: .45; filter: grayscale(1); }
+.peleador .emoji { font-size: 3.5rem; line-height: 1.1; }
+.peleador .nombre { font-size: 1.3rem; font-weight: 800; }
+.peleador .clase { color: #a5b4fc; font-size: .9rem; margin-bottom: 8px; }
+.barra { height: 16px; background: #111; border-radius: 10px; overflow: hidden; margin: 6px 0; }
+.barra div { height: 100%; transition: width .4s; }
+.barra .vida { background: linear-gradient(90deg, #22c55e, #84cc16); }
+.barra .mana { background: linear-gradient(90deg, #3b82f6, #06b6d4); }
+.dato { font-size: .85rem; color: #ddd; }
+.acciones { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.ganador { margin-top: 16px; text-align: center; font-size: 1.6rem; font-weight: 900; color: #fbbf24; }
+#btnRevancha { display: block; margin: 12px auto 0; }
+.consola-pagina { max-width: 980px; margin: 0 auto 30px; padding: 0 16px; }
+.consola-pagina h2 { color: #fbbf24; font-size: 1.1rem; }
+#consola { list-style: none; margin: 0; padding: 12px; background: #0b0c1a; border-radius: 10px; min-height: 80px; max-height: 320px; overflow-y: auto;
+  font: 14px/1.6 Consolas, "Courier New", monospace; color: #e6e6e6; word-break: break-word; }
+#consola li { padding: 3px 6px; border-bottom: 1px solid #222; }
+#consola li.error { color: #ff8a80; background: #3b1f22; }
+#consola li::before { content: "› "; color: #89b4fa; }
+@media (max-width: 767.98px) {
+  .jugadores, .peleadores { grid-template-columns: 1fr; }
+  .vs { font-size: 1.4rem; }
+}
